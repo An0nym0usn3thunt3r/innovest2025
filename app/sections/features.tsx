@@ -13,7 +13,11 @@ import {
 
 export function Feature() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto">
+    <div className="max-w-7xl mx-auto pt-8">
+    <h2 className="max-w-7xl pl-4 pb-8 mx-auto ml-10 text-xl md:text-5xl md:0 font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        ACTIVITIES
+      </h2>
+    <BentoGrid className="max-w-7xl mx-auto">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -25,6 +29,7 @@ export function Feature() {
         />
       ))}
     </BentoGrid>
+    </div>
   );
 }
 const Skeleton = () => (
@@ -32,44 +37,44 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
+    title: "Unparalleled Networking Opportunities",
     description: "Explore the birth of groundbreaking ideas and inventions.",
     header: <Skeleton />,
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
+    title: "Recognition for Deserving Startups",
     description: "Dive into the transformative power of technology.",
     header: <Skeleton />,
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
+    title: "Get Funding Support in front of leading investors",
     description: "Discover the beauty of thoughtful and functional design.",
     header: <Skeleton />,
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Presence of Leading Industry Associations",
     description:
       "Understand the impact of effective communication in our lives.",
     header: <Skeleton />,
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Pursuit of Knowledge",
+    title: "Engage with top industry experts",
     description: "Join the quest for understanding and enlightenment.",
     header: <Skeleton />,
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Joy of Creation",
+    title: "Presence of Senior Government Officials",
     description: "Experience the thrill of bringing ideas to life.",
     header: <Skeleton />,
     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Spirit of Adventure",
+    title: "Enlightening Speaker Sessions.",
     description: "Embark on exciting journeys and thrilling discoveries.",
     header: <Skeleton />,
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,

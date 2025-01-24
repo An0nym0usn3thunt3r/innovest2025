@@ -5,7 +5,8 @@ import { Activity } from "@/app/sections/activities";
 import { Roadmap } from "@/app/sections/roadmap";
 import { CTA } from "@/app/sections/cta";
 import { Testimonials } from "@/app/sections/testimonial";
-import Navbar from "@/components/ui/Navbar";
+import { Footer } from "@/components/footer/footer"
+import Navbar from "@/components/ui/navbar";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <Activity />
       <Roadmap />
       <CTA />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <Footer />
     </>
   );
 }
