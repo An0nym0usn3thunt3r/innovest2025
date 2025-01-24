@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {
@@ -60,6 +61,79 @@ export const ModalTrigger = ({
   );
 };
 
+// Updated type definition for useOutsideClick
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement | null>,
+  callback: () => void
+) => {
+  useEffect(() => {
+    const listener = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node;
+      if (!ref.current || ref.current.contains(target)) {
+        return;
+      }
+      callback();
+    };
+
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, callback]);
+};
+
+const Overlay = ({ className }: { className?: string }) => {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+        backdropFilter: "blur(10px)",
+      }}
+      exit={{
+        opacity: 0,
+        backdropFilter: "blur(0px)",
+      }}
+      className={cn(
+        "fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50",
+        className
+      )}
+    />
+  );
+};
+
+const CloseIcon = () => {
+  const { setOpen } = useModal();
+  return (
+    <button
+      onClick={() => setOpen(false)}
+      className="absolute top-4 right-4 group"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M18 6l-12 12" />
+        <path d="M6 6l12 12" />
+      </svg>
+    </button>
+  );
+};
+
 export const ModalBody = ({
   children,
   className,
@@ -68,6 +142,8 @@ export const ModalBody = ({
   className?: string;
 }) => {
   const { open } = useModal();
+  const modalRef = useRef<HTMLDivElement>(null);
+  const { setOpen } = useModal();
 
   useEffect(() => {
     if (open) {
@@ -75,10 +151,11 @@ export const ModalBody = ({
     } else {
       document.body.style.overflow = "auto";
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [open]);
 
-  const modalRef = useRef(null);
-  const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
   return (
@@ -96,7 +173,7 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50"
+          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50"
         >
           <Overlay />
 
@@ -169,75 +246,4 @@ export const ModalFooter = ({
       {children}
     </div>
   );
-};
-
-const Overlay = ({ className }: { className?: string }) => {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        backdropFilter: "blur(10px)",
-      }}
-      exit={{
-        opacity: 0,
-        backdropFilter: "blur(0px)",
-      }}
-      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
-    ></motion.div>
-  );
-};
-
-const CloseIcon = () => {
-  const { setOpen } = useModal();
-  return (
-    <button
-      onClick={() => setOpen(false)}
-      className="absolute top-4 right-4 group"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M18 6l-12 12" />
-        <path d="M6 6l12 12" />
-      </svg>
-    </button>
-  );
-};
-
-// Hook to detect clicks outside of a component.
-// Add it in a separate file, I've added here for simplicity
-export const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
-  callback: Function
-) => {
-  useEffect(() => {
-    const listener = (event: any) => {
-      // DO NOTHING if the element being clicked is the target element or their children
-      if (!ref.current || ref.current.contains(event.target)) {
-        return;
-      }
-      callback(event);
-    };
-
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
-
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
-  }, [ref, callback]);
 };
