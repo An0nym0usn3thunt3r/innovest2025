@@ -27,18 +27,21 @@ export function RadialFeatures() {
       title: "Application",
       description:
         "Submit your pitch deck and application by 31st January 2024 to be considered for the next round.",
+      src: "/select/1.png",
     },
     {
       number: "02",
       title: "Selection",
       description:
         "Our expert judges will select promising startups for the elevator pitching session, and those chosen from this round will proceed to present in final pitch session.",
+        src: "/select/2.png",
     },
     {
       number: "03",
       title: "Investment",
       description:
         "The selected startups will compete for a chance to secure funding and investment from our network of investors and in addition explore strategic partnership opportunities.",
+        src: "/select/3.png",
     },
   ];
 
@@ -65,7 +68,7 @@ export function RadialFeatures() {
               <div className="bg-black rounded-full p-8 shadow-lg inline-block mb-6 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105">
                 <div className="w-12 h-12 aspect-square">
                   <img
-                    src="/api/placeholder/48/48"
+                    src={feature.src}
                     alt={`${feature.title} icon`}
                     className="w-full h-full object-contain"
                   />
