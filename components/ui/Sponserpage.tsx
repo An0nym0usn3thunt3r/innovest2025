@@ -10,6 +10,10 @@ import {
 export default function RadialFeatures() {
   const arrowRefs = useRef<(SVGSVGElement | null)[]>([]);
 
+  const setArrowRef = (index: number) => (el: SVGSVGElement | null) => {
+    arrowRefs.current[index] = el;
+  };
+
   useEffect(() => {
     arrowRefs.current.forEach((arrow, index) => {
       if (arrow) {
@@ -97,17 +101,17 @@ export default function RadialFeatures() {
               {index < features.length - 1 &&
                 (index === 0 ? (
                   <ArrowRight
-                    ref={(el) => (arrowRefs.current[index] = el)}
+                    ref={setArrowRef(index)}
                     className="absolute top-1/2 -right-12 w-16 h-16 text-blue-500 opacity-0 transform translate-x-4 transition-all duration-500 ease-out hidden md:block"
                   />
                 ) : index === 1 ? (
                   <ArrowDownLeft
-                    ref={(el) => (arrowRefs.current[index] = el)}
+                    ref={setArrowRef(index)}
                     className="absolute -bottom-40 -left-12 w-20 h-20 text-blue-500 opacity-0 transform translate-y-4 rotate-15 transition-all duration-500 ease-out hidden md:block"
                   />
                 ) : (
                   <ArrowForward
-                    ref={(el) => (arrowRefs.current[index] = el)}
+                    ref={setArrowRef(index)}
                     className="absolute top-1/2 -right-12 w-16 h-16 text-blue-500 opacity-0 transform translate-x-4 transition-all duration-500 ease-out hidden md:block"
                   />
                 ))}
