@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export function Roadmap() {
-  const getEventIcon = (text) => {
+  const getEventIcon = (text : string) => {
     if (text.includes("Registration"))
       return <Clock className="w-5 h-5 text-blue-500" />;
     if (text.includes("Lunch"))
