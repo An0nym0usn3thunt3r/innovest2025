@@ -34,7 +34,7 @@ export function Roadmap() {
     return <Users className="w-5 h-5 text-gray-500" />;
   };
 
-  const getEventClass = (text) => {
+  const getEventClass = (text : string) => {
     if (text.includes("Pitch"))
       return "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-2";
     if (text.includes("Break") || text.includes("Lunch"))
