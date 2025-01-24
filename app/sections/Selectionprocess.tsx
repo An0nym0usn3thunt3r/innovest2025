@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export function RadialFeatures() {
-  const arrowRefs = useRef<(SVGSVGElement | null)[]>([]);
+  const arrowRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     arrowRefs.current.forEach((arrow, index) => {
@@ -45,7 +45,7 @@ export function RadialFeatures() {
   return (
     <div className="container mx-auto px-4 py-24 max-w-7xl">
       <div className="text-center mb-24">
-        <h1 className="text-4xl font-bold mb-6 text- text-black">
+        <h1 className="text-4xl font-bold mb-6 text-black">
           Selection Process
         </h1>
       </div>
@@ -56,23 +56,17 @@ export function RadialFeatures() {
             <div
               key={feature.number}
               className={`relative text-center group ${
-                index === 1
-                  ? "md:mt-32"
-                  : index === 2
-                  ? "md:mt-32"
-                  : index === 3
-                  ? "md:mt-32"
-                  : ""
+                index > 0 ? "md:mt-32" : ""
               }`}
             >
               <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-5xl font-bold text-blue-500/20 transition-colors group-hover:text-blue-500/40">
                 {feature.number}
               </span>
               <div className="bg-black rounded-full p-8 shadow-lg inline-block mb-6 transition-all duration-300 group-hover:shadow-xl group-hover:scale-105">
-                <div className="w-12 h-12">
+                <div className="w-12 h-12 aspect-square">
                   <img
-                    src="https://images.unsplash.com/photo-1586282391129-76a6df230234?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="img"
+                    src="/api/placeholder/48/48"
+                    alt={`${feature.title} icon`}
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -83,23 +77,22 @@ export function RadialFeatures() {
               <p className="text-gray-600 max-w-xs mx-auto leading-relaxed">
                 {feature.description}
               </p>
-              {index < features.length - 1 &&
-                (index === 0 ? (
-                  <ArrowRight
-                    ref={(el) => (arrowRefs.current[index] = el)}
-                    className="absolute top-1/2 -right-12 w-16 h-16 text-blue-500 opacity-0 transform translate-x-4 transition-all duration-500 ease-out hidden md:block"
-                  />
-                ) : index === 1 ? (
-                  <ArrowDownLeft
-                    ref={(el) => (arrowRefs.current[index] = el)}
-                    className="absolute -bottom-40 -left-12 w-20 h-20 text-blue-500 opacity-0 transform translate-y-4 rotate-15 transition-all duration-500 ease-out hidden md:block"
-                  />
-                ) : (
-                  <ArrowForward
-                    ref={(el) => (arrowRefs.current[index] = el)}
-                    className="absolute top-1/2 -right-12 w-16 h-16 text-blue-500 opacity-0 transform translate-x-4 transition-all duration-500 ease-out hidden md:block"
-                  />
-                ))}
+              {index < features.length - 1 && (
+                <div
+                  ref={(el) => {
+                    arrowRefs.current[index] = el;
+                  }}
+                  className="hidden md:block absolute opacity-0 transform translate-x-4 transition-all duration-500 ease-out"
+                >
+                  {index === 0 ? (
+                    <ArrowRight className="absolute top-1/2 -right-12 w-16 h-16 text-blue-500" />
+                  ) : index === 1 ? (
+                    <ArrowDownLeft className="absolute -bottom-40 -left-12 w-20 h-20 text-blue-500 rotate-15" />
+                  ) : (
+                    <ArrowForward className="absolute top-1/2 -right-12 w-16 h-16 text-blue-500" />
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
