@@ -9,9 +9,9 @@ export function Activity() {
 
   return (
     <div className="w-full h-full py-20" style={{ transform: "scale(0.8)" }}>
-      <h2 className="max-w-7xl pl-4 mx-auto ml-10 text-xl md:text-5xl md:0 font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        ACTIVITIES
-      </h2>
+      <div className="flex justify-center items-center text-center max-w-7xl mx-auto mb-8 text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Activities
+      </div>
       <Carousel items={cards} />
     </div>
   );

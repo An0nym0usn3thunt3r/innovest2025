@@ -253,7 +253,7 @@ export function Roadmap() {
 
   return (
     <div className="p-1">
-      <h2 className="max-w-7xl pl-4 pb-8 mx-auto ml-10 text-xl md:text-5xl md:0 font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+      <h2 className="max-w-7xl pl-4 pb-8 mx-auto ml-10 text-xl text-center md:text-5xl md:0 font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         Roadmap Of The Event
       </h2>
       <Timeline data={data} />

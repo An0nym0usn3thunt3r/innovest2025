@@ -14,21 +14,21 @@ import {
 export function Feature() {
   return (
     <div className="max-w-7xl mx-auto pt-8">
-    <h2 className="max-w-7xl pl-4 pb-8 mx-auto ml-10 text-xl md:text-5xl md:0 font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        ACTIVITIES
+      <h2 className="max-w-7xl pl-4 pb-8 mx-auto ml-10 text-center text-xl md:text-5xl md:0 font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Benefits
       </h2>
-    <BentoGrid className="max-w-7xl mx-auto">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          icon={item.icon}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-        />
-      ))}
-    </BentoGrid>
+      <BentoGrid className="max-w-7xl mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+      </BentoGrid>
     </div>
   );
 }
