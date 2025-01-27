@@ -31,7 +31,7 @@ export const GoogleGeminiEffect = ({
 10+ Domains, Unlimited Possibilities Across Gujarat's Startup Ecosystem`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
-        <Link href="/register" className="z-30 w-fit mx-auto">
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdXX_Ad-7WvemU1GnfQrgBUdLOVH6nvdPguynrcKF7vPdsrvw/viewform" className="z-30 w-fit mx-auto">
           <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 md:text-base text-black text-xs">
             Register Now
           </button>
