@@ -17,8 +17,8 @@ const jsonLd = {
   "@type": "Organization",
   name: "Innovest 2025",
   description: "Cutting-edge investment solutions for sustainable growth, helping visionaries shape the future of finance.",
-  url: "https://www.innovest2025.com",
-  logo: "https://www.innovest2025.com/logo.png",
+  url: "https://www.innovestgujarat.in",
+  logo: "https://www.innovestgujarat.in/logo.png",
   sameAs: [
     "https://www.instagram.com/innovest_gujarat/",
     "https://in.linkedin.com/company/iicws",
@@ -26,7 +26,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.innovest2025.com'),
+  metadataBase: new URL('https://www.innovestgujarat.in'),
   title: {
     default: "Innovest 2025 – Empowering Future Investments",
     template: "%s | Innovest 2025"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.innovest2025.com",
+    url: "https://www.innovestgujarat.in",
     siteName: "Innovest 2025",
     title: "Innovest 2025 – Empowering Future Investments",
     description: "Innovest 2025 delivers cutting-edge investment solutions for sustainable growth, helping visionaries shape the future of finance.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     }]
   },
   alternates: {
-    canonical: "https://www.innovest2025.com"
+    canonical: "https://www.innovestgujarat.in"
   },
   other: {
     'instagram-url': 'https://www.instagram.com/innovest_gujarat/',
