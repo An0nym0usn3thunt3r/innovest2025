@@ -21,13 +21,10 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Innovest Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto"
+                width={150}
+                height={150}
+                className="h-24 w-28"
               />
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                INNOVEST 2025
-              </span>
             </Link>
           </div>
 
