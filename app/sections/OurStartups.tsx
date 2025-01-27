@@ -7,13 +7,13 @@ const STARTUPS = {
   Our_Startups: [
     {
       name: "Vocadors",
-      logo: "https://placehold.co/200x100/white/black?text=Vocadors",
-      url: "#",
+      logo: "https://vocadors.com/logo.png",
+      url: "https://vocadors.com",
     },
     {
       name: "Newway",
-      logo: "https://placehold.co/200x100/white/black?text=Newway",
-      url: "#",
+      logo: "https://newwayfood.com/wp-content/uploads/2023/08/logo-e1692809539246.jpg",
+      url: "https://newwayfood.com/",
     },
     {
       name: "Ethnic Loop",
