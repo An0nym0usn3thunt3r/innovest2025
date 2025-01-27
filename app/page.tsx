@@ -4,7 +4,6 @@ import { Domains } from "@/app/sections/domains";
 import { Activity } from "@/app/sections/activities";
 import { Roadmap } from "@/app/sections/roadmap";
 import { CTA } from "@/app/sections/cta";
-import { Testimonials } from "@/app/sections/testimonial";
 import { Footer } from "@/components/footer/footer";
 import Navbar from "@/components/ui/navbar";
 import { RadialFeatures } from "./sections/Selectionprocess";
