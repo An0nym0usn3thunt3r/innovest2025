@@ -4,13 +4,13 @@ import { Link } from "lucide-react";
 const links = {
   quickLinks: [
     { label: "Home", href: "/" },
+    { label: "Benefits", href: "#benefits" },
     { label: "Domains", href: "#domains" },
-    { label: "FAQ", href: "#faq" },
   ],
   events: [
     { label: "Event Timeline", href: "#timeline" },
-    { label: "Technical", href: "/tech" },
-    { label: "Designing", href: "/designing" },
+    { label: "About Us", href: "#about" },
+    { label: "FAQ", href: "#faq" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
