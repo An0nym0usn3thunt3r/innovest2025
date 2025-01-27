@@ -104,9 +104,6 @@ export default function Navbar() {
         <Link href="/#faq" className="text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
         FAQ
         </Link>
-        <Link href="/register" className="bg-indigo-600 text-white block w-[calc(100%-24px)] text-center px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-700 mx-3 mt-4 transition-colors duration-200">
-          Register
-        </Link>
       </div>
       </motion.div>
     </nav>
