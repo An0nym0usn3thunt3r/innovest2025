@@ -42,30 +42,30 @@ const FAQ_ITEMS = [
 
 export default function FAQSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-12 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto ml-12">
-          <h1 className="text-4xl font-bold text-black mb-12 text-center">
-            Frequently Asked Questions
-          </h1>
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-black mb-8 md:mb-12 text-center">
+        Frequently Asked Questions
+        </h1>
 
-          <Accordion type="single" collapsible className="space-y-4">
-            {FAQ_ITEMS.map((item, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border rounded-lg px-6 py-4 bg-white"
-              >
-                <AccordionTrigger className="text-black hover:no-underline text-lg font-semibold">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-black/80 text-base leading-relaxed pt-4">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        <Accordion type="single" collapsible className="space-y-4 max-w-4xl mx-auto">
+        {FAQ_ITEMS.map((item, index) => (
+          <AccordionItem
+          key={index}
+          value={`item-${index}`}
+          className="border rounded-lg px-4 md:px-6 py-4 bg-white"
+          >
+          <AccordionTrigger className="text-black hover:no-underline text-base md:text-lg font-semibold">
+            {item.question}
+          </AccordionTrigger>
+          <AccordionContent className="text-black/80 text-sm md:text-base leading-relaxed pt-4">
+            {item.answer}
+          </AccordionContent>
+          </AccordionItem>
+        ))}
+        </Accordion>
+      </div>
       </div>
     </section>
   );
