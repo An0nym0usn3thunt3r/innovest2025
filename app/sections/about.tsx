@@ -17,17 +17,17 @@ export default function AboutUsSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
       {/* Left Side - 3D Card */}
       <div className="flex justify-center w-full px-4 md:px-0">
-      <CardContainer className="inter-var w-full">
+      <CardContainer className="inter-var w-full" containerClassName="transform-none sm:transform-gpu">
         <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-purple-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full sm:max-w-[30rem] h-auto rounded-xl p-4 md:p-6 border">
         <CardItem
-        translateZ={50}
+        translateZ={20} // Reduced from 50
         className="text-xl md:text-2xl font-bold text-neutral-600 dark:text-white"
         >
         Innovation Hub
         </CardItem>
         <CardItem
         as="p"
-        translateZ={60}
+        translateZ={30} // Reduced from 60
         className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
         We are a dynamic innovation hub fostering the next generation
@@ -35,18 +35,18 @@ export default function AboutUsSection() {
         innovative ideas into successful ventures through mentorship,
         resources, and strategic partnerships.
         </CardItem>
-        <CardItem translateZ={100} className="w-full mt-4">
+        <CardItem translateZ={40} className="w-full mt-4"> {/* Reduced from 100 */}
         <Image
         src="/images/innovation-hub.jpg"
-        height={400}
-        width={800}
-        className="h-48 md:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+        height={300} // Reduced from 400
+        width={600} // Reduced from 800
+        className="h-36 sm:h-48 md:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
         alt="Innovation Hub"
         />
         </CardItem>
-        <div className="flex justify-between items-center mt-8 md:mt-20">
+        <div className="flex justify-between items-center mt-6 md:mt-20">
         <CardItem
-        translateZ={20}
+        translateZ={10} // Reduced from 20
         as={Link}
         href="/contact"
         className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white hover:opacity-80 transition-opacity"
@@ -54,7 +54,7 @@ export default function AboutUsSection() {
         Contact Us →
         </CardItem>
         <CardItem
-        translateZ={20}
+        translateZ={10} // Reduced from 20
         as={Link}
         href="/join"
         className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold hover:opacity-80 transition-opacity"
