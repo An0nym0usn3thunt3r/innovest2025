@@ -16,17 +16,39 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <section id="home">
       <Hero />
+      </section>
+      <section id="benefits">
       <Feature />
+      </section>
+      <section id="domains">
       <Domains />
+      </section>
+      <section id="selection-process">
       <RadialFeatures />
+      </section>
+      <section id="activity">
       <Activity />
+      </section>
+      <section id="timeline">
       <Roadmap />
+      </section>
+      <section id="about">
       <AboutUs />
+      </section>
+      <section id="sponsors">
       <SponsorsSection />
+      </section>
+      <section id="startups">
       <StartupsSection />
+      </section>
+      <section id="faq">
       <FAQ />
+      </section>
+      <section id="contact">
       <CTA />
+      </section>
       {/* <Testimonials /> */}
       <Footer />
     </>
