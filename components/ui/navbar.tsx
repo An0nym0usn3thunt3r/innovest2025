@@ -38,7 +38,7 @@ export default function Navbar() {
         <Link href="/#faq" className="text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium">
           FAQ
         </Link>
-        <Link href="/register" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdXX_Ad-7WvemU1GnfQrgBUdLOVH6nvdPguynrcKF7vPdsrvw/viewform" className=" items-center flex bg-blue-600 px-6 rounded-md text-white my-2">
           Register
         </Link>
         </div>

@@ -37,7 +37,7 @@ export default function AboutUsSection() {
         </CardItem>
         <CardItem translateZ={40} className="w-full mt-4"> {/* Reduced from 100 */}
         <Image
-        src="/images/innovation-hub.jpg"
+        src="https://silveroakuni.ac.in/upload/images/slider/m_12.webp"
         height={300} // Reduced from 400
         width={600} // Reduced from 800
         className="h-36 sm:h-48 md:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -71,7 +71,7 @@ export default function AboutUsSection() {
       <p className="text-lg md:text-xl lg:text-3xl text-neutral-500 dark:text-neutral-400 max-w-3xl text-left mb-8 md:mb-10">
         Discover our{" "}
         <LinkPreview
-        url="/programs"
+        url="https://ignite.silveroakuni.ac.in/"
         imageSrc="/benefits/1.png"
         isStatic={true}
         className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
@@ -84,7 +84,7 @@ export default function AboutUsSection() {
       <p className="text-lg md:text-xl lg:text-3xl text-neutral-500 dark:text-neutral-400 max-w-3xl text-left">
         Connect with our{" "}
         <LinkPreview
-        url="/mentors"
+        url="https://ignite.silveroakuni.ac.in/mentor"
         imageSrc="/images/mentors.jpg"
         isStatic
         className="font-bold"
@@ -93,7 +93,7 @@ export default function AboutUsSection() {
         </LinkPreview>{" "}
         and access our{" "}
         <LinkPreview
-        url="/resources"
+        url="https://ignite.silveroakuni.ac.in/co-working"
         imageSrc="/images/resources.jpg"
         isStatic
         className="font-bold"
