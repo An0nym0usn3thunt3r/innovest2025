@@ -85,7 +85,7 @@ export default function AboutUsSection() {
         Connect with our{" "}
         <LinkPreview
         url="https://ignite.silveroakuni.ac.in/mentor"
-        imageSrc="/images/mentors.jpg"
+        imageSrc="/lens1.png"
         isStatic
         className="font-bold"
         >
@@ -94,7 +94,7 @@ export default function AboutUsSection() {
         and access our{" "}
         <LinkPreview
         url="https://ignite.silveroakuni.ac.in/co-working"
-        imageSrc="/images/resources.jpg"
+        imageSrc="/lens2.png"
         isStatic
         className="font-bold"
         >
