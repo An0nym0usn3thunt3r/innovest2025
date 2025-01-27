@@ -7,30 +7,30 @@ const SPONSORS = {
   Investment_partner: [
     {
       name: "GVFL",
-      logo: "https://placehold.co/200x100/white/black?text=Groq",
+      logo: "https://gvfl.com/wp-content/uploads/2025/01/cropped-GVFL-L1.png",
       url: "https://gvfl.com",
     },
     {
       name: "PITCH VILLA",
-      logo: "https://placehold.co/200x100/white/black?text=PITCH VILLA",
-      url: "https://gvfl.com",
+      logo: "https://ugc.production.linktr.ee/P8aOrRUsQSOCqwzFV7HM_GEUeY5uwR0BFEiGI?io=true&size=small-v3_0",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSf_zfTA569p5_pKI52G3X_l6XC9nyPIkrk90UTJ3I41yJp2Bg/viewform",
     },
     {
       name: "sanelite",
-      logo: "https://placehold.co/200x100/white/black?text=sanelite",
-      url: "https://gvfl.com",
+      logo: "https://www.sanelitesolar.com/assets/images/logo/solar-logo.svg",
+      url: "https://www.sanelitesolar.com/",
     },
   ],
   Supported_by: [
     {
       name: "Industries Commissionerate, Govt of Gujarat",
-      logo: "https://placehold.co/200x100/white/black?text=Industries Commissionerate",
+      logo: "https://ic.gujarat.gov.in/images/logo.png",
       url: "https://ic.gujarat.gov.in/",
     },
     {
       name: "Startup Gujarat",
-      logo: "https://placehold.co/200x100/white/black?text=Startup Gujarat",
-      url: "https://startup.gujarat.gov.in/",
+      logo: "https://www.chemicals4construction.com/images/Startup%20Gujarat.png",
+      url: "https://startup.gujarat.gov.in/home",
     },
   ],
 };

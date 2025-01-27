@@ -16,11 +16,6 @@ const STARTUPS = {
       url: "#",
     },
     {
-      name: "Syncinfluence",
-      logo: "https://placehold.co/200x100/white/black?text=Syncinfluence",
-      url: "#",
-    },
-    {
       name: "Ethnic Loop",
       logo: "https://placehold.co/200x100/white/black?text=Ethnic Loop",
       url: "#",
